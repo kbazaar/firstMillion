@@ -11,22 +11,10 @@ Ecwid.OnPageLoaded.add(function(page){
       $('.ecwid-productBrowser-price').each(function( index ){
          if($(this).text() == free_product_match){
             console.log("Is Free Product");
-            $(this).parent().closest('.ecwid-btn--addToBag').hide();    
-            $(this).parent().closest('.ecwid-productBrowser-details-qtyPanel').hide();
-            $(this).parent().closest('.ecwid-productBrowser-sku').hide();
-            $(this).parent().closest('.ecwid-productBrowser-price').hide();
-         }         
-      });
-   }
-   if(page.type=='CATEGORY'){
-      $('.ecwid-btn--addToBag').show();   
-      $('.ecwid-productBrowser-price').each(function( index ){
-         if($(this).text() == free_product_match){
-            console.log("Is Free Product");
-            $(this).parent().closest('.ecwid-btn--addToBag').hide();    
-            $(this).parent().closest('.ecwid-productBrowser-details-qtyPanel').hide();
-            $(this).parent().closest('.ecwid-productBrowser-sku').hide();
-            $(this).parent().closest('.ecwid-productBrowser-price').hide();
+            $(this).parent().find('.ecwid-btn--addToBag').hide();    
+            $(this).parent().find('.ecwid-productBrowser-details-qtyPanel').hide();
+            $(this).parent().find('.ecwid-productBrowser-sku').hide();
+            $(this).parent().find('.ecwid-productBrowser-price').hide();
          }         
       });
    }
