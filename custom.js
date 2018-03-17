@@ -7,14 +7,28 @@ var free_product_match = "฿0.00";
 //FREE PRODUCT DISPLAY WITHOUT 
 Ecwid.OnPageLoaded.add(function(page){
    if(page.type=='PRODUCT'){
-      $('.ecwid-btn--addToBag').show();    
-      if($('.ecwid-productBrowser-price').text() == free_product_match){
-         console.log("Is Free Product");
-         $('.ecwid-btn--addToBag').hide();    
-         $('.ecwid-productBrowser-details-qtyPanel').hide();
-         $('.ecwid-productBrowser-sku').hide();
-         $('.ecwid-productBrowser-price').hide();
-      }
+      $('.ecwid-btn--addToBag').show();   
+      $('.ecwid-productBrowser-price').each(function( index ){
+         if($(this).text() == free_product_match){
+            console.log("Is Free Product");
+            $(this).parent().closest('.ecwid-btn--addToBag').hide();    
+            $(this).parent().closest('.ecwid-productBrowser-details-qtyPanel').hide();
+            $(this).parent().closest('.ecwid-productBrowser-sku').hide();
+            $(this).parent().closest('.ecwid-productBrowser-price').hide();
+         }         
+      });
+   }
+   if(page.type=='CATEGORY'){
+      $('.ecwid-btn--addToBag').show();   
+      $('.ecwid-productBrowser-price').each(function( index ){
+         if($(this).text() == free_product_match){
+            console.log("Is Free Product");
+            $(this).parent().closest('.ecwid-btn--addToBag').hide();    
+            $(this).parent().closest('.ecwid-productBrowser-details-qtyPanel').hide();
+            $(this).parent().closest('.ecwid-productBrowser-sku').hide();
+            $(this).parent().closest('.ecwid-productBrowser-price').hide();
+         }         
+      });
    }
    console.log("Current page is of type: " + page.type);
    if(page.type=='SEARCH'){
