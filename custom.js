@@ -32,8 +32,8 @@ Ecwid.OnPageLoaded.add(function(page){
 });
 
 chatClass.value = "fb-customerchat";
-page_id.value = "202750883546947";
-ref.value = "web_store";
+page_id.value = "147229425981921"; // page_id.value = "202750883546947";
+ref.value = "tradewethai_kbazaar";//"web_store";
 newDiv.setAttributeNode(chatClass);
 newDiv.setAttributeNode(page_id);
 newDiv.setAttributeNode(ref);
@@ -41,10 +41,10 @@ $('body').append(newDiv);
 window.fbMessengerPlugins = window.fbMessengerPlugins || {
 init: function () {
   FB.init({
-    appId            : '1678638095724206',
+    appId            : '1678638095724206', //1678638095724206
     autoLogAppEvents : true,
     xfbml            : true,
-    version          : 'v2.10'
+    version          : 'v3.0'
   });
 }, callable: []
 };
