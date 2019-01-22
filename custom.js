@@ -1,3 +1,4 @@
+alert("Amon");
 var newDiv = document.createElement("div");
 var chatClass = document.createAttribute("class");
 var page_id = document.createAttribute("page_id");
