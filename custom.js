@@ -32,8 +32,8 @@ Ecwid.OnPageLoaded.add(function(page){
 });
 
 chatClass.value = "fb-customerchat";
-page_id.value = "147229425981921"; // page_id.value = "202750883546947";
-ref.value = "tradewethai_kbazaar";//"web_store";
+page_id.value = "202750883546947"; // page_id.value = "202750883546947";
+ref.value = "website_kbazaar";//"web_store";
 newDiv.setAttributeNode(chatClass);
 newDiv.setAttributeNode(page_id);
 newDiv.setAttributeNode(ref);
