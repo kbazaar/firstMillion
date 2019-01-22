@@ -1,4 +1,3 @@
-alert("Amon");
 var newDiv = document.createElement("div");
 var chatClass = document.createAttribute("class");
 var page_id = document.createAttribute("page_id");
@@ -31,6 +30,8 @@ Ecwid.OnPageLoaded.add(function(page){
       });
    }
 });
+
+console.log("KBazaar First Million Repo GitHub");
 
 chatClass.value = "fb-customerchat";
 page_id.value = "202750883546947"; // page_id.value = "202750883546947";
